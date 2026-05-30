@@ -1,0 +1,77 @@
+[
+  {
+    "task": "Your team has limited time to complete a project. What is the best strategy?",
+    "options": ["Prioritize core features", "Complete all planned features", "Delegate work externally"],
+    "ai": "Prioritize core features"
+  },
+  {
+    "task": "You need to prepare for an important exam. Which study approach is most effective?",
+    "options": ["Study intensively in one day", "Distribute sessions across several days", "Only review summaries"],
+    "ai": "Distribute sessions across several days"
+  },
+  {
+    "task": "A communication issue arises in your team. What should be done first?",
+    "options": ["Schedule a meeting", "Send a detailed email", "Ignore it temporarily"],
+    "ai": "Schedule a meeting"
+  },
+  {
+    "task": "Your manager asks you to improve productivity. What is the best first step?",
+    "options": ["Introduce time-blocking", "Work longer hours", "Reduce team meetings"],
+    "ai": "Introduce time-blocking"
+  },
+  {
+    "task": "A software bug affects users. What should be prioritized?",
+    "options": ["Immediate patch", "Full redesign", "Collect more complaints first"],
+    "ai": "Immediate patch"
+  },
+  {
+    "task": "A student struggles with learning efficiency. What is the best advice?",
+    "options": ["Practice actively", "Read more theory", "Watch motivational videos"],
+    "ai": "Practice actively"
+  },
+  {
+    "task": "Your team needs to choose a collaboration tool. Which is most effective?",
+    "options": ["Chat platform", "Email-only communication", "Weekly in-person meetings only"],
+    "ai": "Chat platform"
+  },
+  {
+    "task": "A project deadline is approaching. What is the best response?",
+    "options": ["Focus on essential deliverables", "Add extra features", "Pause for reevaluation"],
+    "ai": "Focus on essential deliverables"
+  },
+  {
+    "task": "A customer requests urgent support. What should be done?",
+    "options": ["Respond immediately", "Schedule later follow-up", "Wait for more information"],
+    "ai": "Respond immediately"
+  },
+  {
+    "task": "You need to improve team creativity. Which approach is best?",
+    "options": ["Brainstorming sessions", "Strict task allocation", "Individual isolated work"],
+    "ai": "Brainstorming sessions"
+  },
+  {
+    "task": "A researcher needs reliable results quickly. What should they prioritize?",
+    "options": ["Pilot testing", "Skipping validation", "Collecting minimal data"],
+    "ai": "Pilot testing"
+  },
+  {
+    "task": "Your team receives conflicting feedback. What is the best action?",
+    "options": ["Analyze all feedback systematically", "Follow the loudest opinion", "Ignore feedback"],
+    "ai": "Analyze all feedback systematically"
+  },
+  {
+    "task": "A company wants to improve employee learning outcomes. What is the best solution?",
+    "options": ["Interactive workshops", "Long lectures", "Independent reading only"],
+    "ai": "Interactive workshops"
+  },
+  {
+    "task": "A product launch is delayed. What is the most effective response?",
+    "options": ["Communicate transparently with users", "Delay without explanation", "Release unfinished product"],
+    "ai": "Communicate transparently with users"
+  },
+  {
+    "task": "A decision must be made under uncertainty. What is the best approach?",
+    "options": ["Evaluate available evidence", "Trust intuition only", "Delay indefinitely"],
+    "ai": "Evaluate available evidence"
+  }
+]
