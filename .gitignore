@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Streamlit config
+.streamlit/
+
+# Local results (DO NOT upload experiment data)
+results.csv
+*.csv
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
