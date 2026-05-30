@@ -139,6 +139,6 @@ if st.button("Submit Answer", type="primary"):
     # Next task
     st.session_state.task_index += 1
     st.session_state.start_time = time.time()
-    st.experimental_rerun()   # для старих версій Streamlit
+    st.rerun()
 
 st.caption("Human-AI Collaborative Decision Making Experiment")
