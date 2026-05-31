@@ -114,7 +114,12 @@ recommendation_rejection = 1 if (ai_rec and selected_option != ai_rec) else 0
 # =========================
 # Submit
 # =========================
-if st.button("Submit Answer", type="primary"):
+if st.button(
+    "Submit Answer",
+    type="primary",
+    key=f"submit_{st.session_state.task_index}"
+):
+
     response_time = round(time.time() - st.session_state.start_time, 2)
 
     new_row = {
@@ -130,11 +135,6 @@ if st.button("Submit Answer", type="primary"):
         "recommendation_rejection": recommendation_rejection
     }
 
-if st.button(
-    "Submit Answer",
-    type="primary",
-    key=f"submit_{st.session_state.task_index}"
-):
     response = requests.post(
         SCRIPT_URL,
         json=new_row
@@ -148,5 +148,10 @@ if st.button(
         st.success("Answer saved successfully!")
     else:
         st.error("Failed to save response.")
+
+    # Next task
+    st.session_state.task_index += 1
+    st.session_state.start_time = time.time()
+    st.rerun()
 
 st.caption("Human-AI Collaborative Decision Making Experiment")
