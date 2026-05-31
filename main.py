@@ -133,16 +133,14 @@ if st.button("Submit Answer", type="primary"):
     }
 
     response = requests.post(
-    SCRIPT_URL,
-    json=new_row
-)
+        SCRIPT_URL,
+        json=new_row
+    )
 
-if response.status_code == 200:
-    st.success("Answer saved successfully!")
-else:
-    st.error("Failed to save response.")
-
-    st.success(" Answer saved successfully!")
+    if response.status_code == 200:
+        st.success("Answer saved successfully!")
+    else:
+        st.error("Failed to save response.")
 
     # Next task
     st.session_state.task_index += 1
