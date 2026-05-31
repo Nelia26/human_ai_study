@@ -7,6 +7,7 @@ import random
 import uuid
 import requests
 
+SCRIPT_URL = "https://script.google.com/a/macros/nure.ua/s/AKfycbynxZ3PvOpjSVRK7t4_7gvd2s6LUota7NMWu2-ZKaIWCxda62RbrsKkkdL8lK8T7IFSPw/exec"
 st.set_page_config(page_title="Human-AI Study", layout="centered")
 st.title(" Human–AI Collaborative Decision-Making Study")
 
@@ -131,9 +132,15 @@ if st.button("Submit Answer", type="primary"):
         "recommendation_rejection": recommendation_rejection
     }
 
-    df = pd.read_csv(csv_file)
-    df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
-    df.to_csv(csv_file, index=False)
+    response = requests.post(
+    SCRIPT_URL,
+    json=new_row
+)
+
+if response.status_code == 200:
+    st.success("Answer saved successfully!")
+else:
+    st.error("Failed to save response.")
 
     st.success(" Answer saved successfully!")
 
