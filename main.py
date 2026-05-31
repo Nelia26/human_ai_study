@@ -5,7 +5,7 @@ import json
 import os
 import random
 import uuid
-import requests
+import requests 
 
 SCRIPT_URL = "https://script.google.com/a/macros/nure.ua/s/AKfycbynxZ3PvOpjSVRK7t4_7gvd2s6LUota7NMWu2-ZKaIWCxda62RbrsKkkdL8lK8T7IFSPw/exec"
 st.set_page_config(page_title="Human-AI Study", layout="centered")
