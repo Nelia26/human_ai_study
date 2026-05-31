@@ -7,7 +7,7 @@ import random
 import uuid
 import requests
 
-SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_4hb0ezO53IGKJJFXKNg6EvwBPUZaZ7C_oE7XptO3W3pCwaeosMQn2KErbUNaFNLyEQ/exec"
+SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyYHGa935Kq4hkwxGjmFTyPkhhIGBupoYHA9nZIfijldYDsfcAbaycNmpekFqVA9x3JPw/exec"
 
 # =========================
 # Participant ID
