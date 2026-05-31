@@ -131,9 +131,10 @@ if st.button("Submit Answer", type="primary"):
     }
 
     response = requests.post(
-        SCRIPT_URL,
-        json=new_row
-    )
+    SCRIPT_URL,
+    json=new_row,
+    headers={"Content-Type": "application/json"}
+)
 
     if response.status_code == 200:
         st.success("Answer saved successfully!")
