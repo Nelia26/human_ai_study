@@ -5,6 +5,7 @@ import json
 import os
 import random
 import uuid
+import requests
 
 st.set_page_config(page_title="Human-AI Study", layout="centered")
 st.title(" Human–AI Collaborative Decision-Making Study")
