@@ -130,24 +130,19 @@ if st.button("Submit Answer", type="primary"):
         "recommendation_rejection": recommendation_rejection
     }
 
+if st.button("Submit Answer", type="primary"):
     response = requests.post(
-    SCRIPT_URL,
-    json=new_row,
-    headers={"Content-Type": "application/json"}
-)
+        SCRIPT_URL,
+        json=new_row
+    )
 
-# 🔍 DEBUG 
-st.write("Status code:", response.status_code)
-st.write("Response text:", response.text)
+    # 🔍 DEBUG
+    st.write("Status code:", response.status_code)
+    st.write("Response text:", response.text)
 
-if response.status_code == 200:
-    st.success("Answer saved successfully!")
-else:
-    st.error("Failed to save response.")
-
-    # Next task
-    st.session_state.task_index += 1
-    st.session_state.start_time = time.time()
-    st.rerun()
+    if response.status_code == 200:
+        st.success("Answer saved successfully!")
+    else:
+        st.error("Failed to save response.")
 
 st.caption("Human-AI Collaborative Decision Making Experiment")
