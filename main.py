@@ -142,8 +142,6 @@ if st.button(
     st.write("STATUS:", response.status_code)
     st.write("RESPONSE:", response.text)
 
-    st.session_state.task_index += 1
-    st.session_state.start_time = time.time()
-    st.rerun()
+    st.stop()
 
 st.caption("Human-AI Collaborative Decision Making Experiment")
