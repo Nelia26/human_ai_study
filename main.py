@@ -61,14 +61,6 @@ if not os.path.exists(csv_file):
 if st.session_state.task_index >= len(tasks):
     st.success("🎉 Experiment completed! Thank you for your participation!")
     st.balloons()
-    df = pd.read_csv(csv_file)
-    participant_data = df[df['participant_id'] == st.session_state.participant_id]
-    st.download_button(
-        label="Download my results",
-        data=participant_data.to_csv(index=False),
-        file_name=f"{st.session_state.participant_id}_results.csv",
-        mime="text/csv"
-    )
     st.stop()
 
 # =========================
