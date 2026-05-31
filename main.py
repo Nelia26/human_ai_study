@@ -130,7 +130,11 @@ if st.button("Submit Answer", type="primary"):
         "recommendation_rejection": recommendation_rejection
     }
 
-if st.button("Submit Answer", type="primary"):
+if st.button(
+    "Submit Answer",
+    type="primary",
+    key=f"submit_{st.session_state.task_index}"
+):
     response = requests.post(
         SCRIPT_URL,
         json=new_row
