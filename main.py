@@ -119,20 +119,8 @@ if st.button(
     type="primary",
     key=f"submit_{st.session_state.participant_id}_{st.session_state.task_index}"
 ):
-    response_time = round(time.time() - st.session_state.start_time, 2)
-
-    new_row = {
-        "participant_id": st.session_state.participant_id,
-        "task_id": st.session_state.task_index + 1,
-        "condition": current_condition,
-        "ai_recommendation": ai_rec,
-        "selected_option": selected_option,
-        "response_time": response_time,
-        "confidence": confidence,
-        "trust": trust,
-        "autonomy": autonomy,
-        "recommendation_rejection": recommendation_rejection
-    }
+    st.write("BUTTON CLICKED")
+    st.stop()
 
     response = requests.post(
         SCRIPT_URL,
