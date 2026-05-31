@@ -136,10 +136,14 @@ if st.button("Submit Answer", type="primary"):
     headers={"Content-Type": "application/json"}
 )
 
-    if response.status_code == 200:
-        st.success("Answer saved successfully!")
-    else:
-        st.error("Failed to save response.")
+# 🔍 DEBUG 
+st.write("Status code:", response.status_code)
+st.write("Response text:", response.text)
+
+if response.status_code == 200:
+    st.success("Answer saved successfully!")
+else:
+    st.error("Failed to save response.")
 
     # Next task
     st.session_state.task_index += 1
