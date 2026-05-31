@@ -7,9 +7,7 @@ import random
 import uuid
 import requests
 
-SCRIPT_URL = "https://script.google.com/a/macros/nure.ua/s/AKfycbynxZ3PvOpjSVRK7t4_7gvd2s6LUota7NMWu2-ZKaIWCxda62RbrsKkkdL8lK8T7IFSPw/exec"
-st.set_page_config(page_title="Human-AI Study", layout="centered")
-st.title(" Human–AI Collaborative Decision-Making Study")
+SCRIPT_URL = https://script.google.com/macros/s/AKfycbzI_6St9hJU2GJdveWfiV341JUxlabxUbN-unqGUEudRqew7pNeW9_u-_7WtRxf5PyvxQ/exec
 
 # =========================
 # Participant ID
