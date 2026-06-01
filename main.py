@@ -93,12 +93,30 @@ if current_condition == "AI" and "ai" in task:
 selected_option = st.radio("Your choice:", task_options, key=f"opt_{st.session_state.task_index}")
 
 col1, col2, col3 = st.columns(3)
+
 with col1:
-    confidence = st.slider("Confidence in your decision", 1, 10, 7, key=f"conf_{st.session_state.task_index}")
-with col2:
-    trust = st.slider("Trust in AI", 1, 10, 6, key=f"trust_{st.session_state.task_index}")
+    confidence = st.slider(
+        "Confidence in your decision",
+        1, 10, 7,
+        key=f"conf_{st.session_state.task_index}"
+    )
+
+if current_condition == "AI":
+    with col2:
+        trust = st.slider(
+            "Trust in AI",
+            1, 10, 6,
+            key=f"trust_{st.session_state.task_index}"
+        )
+else:
+    trust = None
+
 with col3:
-    autonomy = st.slider("Perceived Autonomy", 1, 10, 7, key=f"auto_{st.session_state.task_index}")
+    autonomy = st.slider(
+        "Perceived Autonomy",
+        1, 10, 7,
+        key=f"auto_{st.session_state.task_index}"
+    )
 
 # Recommendation rejection
 recommendation_rejection = 1 if (ai_rec and selected_option != ai_rec) else 0
