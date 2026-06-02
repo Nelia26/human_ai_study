@@ -137,11 +137,12 @@ recommendation_rejection = 1 if (ai_rec and selected_option != ai_rec) else 0
 # =========================
 # Submit
 # =========================
-if st.button(
-    "Submit Answer",
-    type="primary",
-    key=f"submit_{st.session_state.participant_id}_{st.session_state.task_index}"
-):
+if st.button("Submit Answer", type="primary"):
+
+    if selected_option == "-- Select an option --":
+        st.warning("Please select an answer before submitting.")
+        st.stop()
+
     response_time = round(time.time() - st.session_state.start_time, 2)
 
     new_row = {
