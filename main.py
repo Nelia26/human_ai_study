@@ -83,14 +83,27 @@ st.write("**" + task["task"] + "**")
 
 # AI Recommendation
 ai_rec = None
-if current_condition == "AI" and "ai" in task:
-    ai_rec = random.choice(task_options)
+if current_condition == "AI":
+
+    ai_key = f"ai_rec_{st.session_state.task_index}"
+
+    if ai_key not in st.session_state:
+        st.session_state[ai_key] = random.choice(task_options)
+
+    ai_rec = st.session_state[ai_key]
+
     st.info(f"🤖 **AI recommends:** {ai_rec}")
 
 # =========================
 # User inputs
 # =========================
-selected_option = st.radio("Your choice:", task_options, key=f"opt_{st.session_state.task_index}")
+options_with_placeholder = ["-- Select an option --"] + task_options
+
+selected_option = st.radio(
+    "Your choice:",
+    options_with_placeholder,
+    key=f"opt_{st.session_state.task_index}"
+)
 
 col1, col2, col3 = st.columns(3)
 
